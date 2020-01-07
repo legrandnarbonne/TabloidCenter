@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LogEntries>
+<LogEntry Date="2019-01-25 09:03:14" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-01-25 09:03:14" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-01-25 09:03:18" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>23 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-01-25 09:03:19" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="11">
+  <Message>new login DOMCAN\dapojero</Message>
+</LogEntry>
+</LogEntries>

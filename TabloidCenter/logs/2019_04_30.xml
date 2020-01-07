@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LogEntries>
+<LogEntry Date="2019-04-30 16:46:22" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:46:22" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:46:26" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>23 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:46:27" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="12">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:47:50" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:47:50" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:47:54" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>23 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:47:54" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="8">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:50:54" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:50:54" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:50:57" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>23 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:50:58" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="8">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:53:13" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:53:13" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:53:36" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>23 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:53:36" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="14">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:56:51" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Log set.</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:56:51" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>Application started</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:56:56" Severity="Info" Source="TabloidCenter.Startup.Configuration" ThreadId="1">
+  <Message>22 sites configs loaded</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:56:56" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="8">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+<LogEntry Date="2019-04-30 16:57:49" Severity="Info" Source="TabloidCenter.Controllers.HomeController.Index" ThreadId="9">
+  <Message>new login DOMCAN\DAPOJERO</Message>
+</LogEntry>
+</LogEntries>

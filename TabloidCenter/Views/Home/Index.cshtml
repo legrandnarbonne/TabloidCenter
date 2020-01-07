@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "Tabloid Center";
+}
+@model TabloidCenter.Classes.Models.TilesModel
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-align-justify"></i>
+                </a>
+                @if (Model.AllowedSiteCollection.Count > 0 && Model.DisallowedSiteCollection.Count > 0)
+                {
+                    <ul class="dropdown-menu">
+                        {
+                        <li><a href="#" class="btnMine">Mes applications</a></li>
+
+                        <li><a href="#" class="btnOthers">Les autres applications</a></li>
+                    </ul>
+                }
+            </li>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Mes applications.</a>
+            </div>
+        </ul>
+    </div>
+</nav>
+<div id="main-container" class="col-xs-12">
+
+    <div id="tiles-container" class="sampleClass">
+        @if (Model.AllowedSiteCollection.Count > 0)
+            {
+            <div class="tl-page allowed" data-tl-template="TemplateAllowed">
+                @foreach (var item in Model.AllowedSiteCollection)
+                {
+                    <div class="@item.Class">
+                        <h2>@item.Titre</h2>
+                        <i class="fa @item.Icone icon"></i>
+                        <span class="content-hidden">
+                            <p>@item.Description</p>
+                            <p>
+                                <a class="githubAnchor floatRight" href="@item.URL" title="Ouvrir le site">
+                                    <i>Accéder au site</i>
+                                </a>
+                                @if (!string.IsNullOrEmpty(item.DocURL))
+                                {
+                                    <a class="githubAnchor floatRight" href="@item.DocURL" title="Ouvrir la documentation">
+                                        <i>?</i>
+                                    </a>
+                                }
+
+                            </p>
+                        </span>
+                    </div>
+                }
+            </div>
+        }
+        @if (Model.DisallowedSiteCollection.Count > 0)
+            {
+            <div class="tl-page disallowed" data-tl-template="TemplateDisallowed">
+                @foreach (var item in Model.DisallowedSiteCollection)
+                {
+                    <div class="@item.Class">
+                        <h2>@item.Titre</h2>
+                        <i class="fa @item.Icone icon"></i>
+                        <span class="content-hidden">
+                            <p>@item.Description</p>
+                            <p>
+                                @if (!string.IsNullOrEmpty(item.DocURL))
+                                {
+                                    @*<a class="githubAnchor floatRight" href="@item.DocURL" title="Ouvrir le site">
+                                            <i>?</i>
+                                        </a>*@
+                                }
+                                <a class="githubAnchor floatRight" href="@item.URL" title="Ouvrir le site">
+                                    <i>Accéder au site</i>
+                                </a>
+                            </p>
+                        </span>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+</div>
+<script>
+    // build tiles template
+    var TemplateObject = { TemplateAllowed: { tilesNum: 0 }, TemplateDisallowed: { tilesNum: 0 } };
+
+    TemplateObject.TemplateAllowed.tilesNum = $(".allowed>div").length;
+    TemplateObject.TemplateDisallowed.tilesNum = $(".disallowed>div").length;
+
+    TemplateObject.TemplateAllowed['tiles'] = new Array;
+    TemplateObject.TemplateDisallowed['tiles'] = new Array;
+
+    for (var i = 0; i < TemplateObject.TemplateAllowed.tilesNum; i++)
+        TemplateObject.TemplateAllowed['tiles'].push('col-xs-12 col-md-3');
+    for (var i = 0; i < TemplateObject.TemplateDisallowed.tilesNum; i++)
+        TemplateObject.TemplateDisallowed['tiles'].push('col-xs-12 col-md-3');
+
+    // set plugin
+    $('#tiles-container').jstiles({ templateObj: TemplateObject, tileRatio: 0.55 });
+
+    $(".btnOthers").click(function () {
+        toOther(true);
+    });
+    $(".tl-arrow-next").click(function () {
+        toOther();
+    });
+    $(".btnMine").click(function () {
+        toMine(true);
+    });
+    $(".tl-arrow-prev").click(function () {
+        toMine();
+    });
+    
+    $(".btnMine").hide();
+
+    function toOther(fromMenu)
+    {
+        if (fromMenu) $('.tl-arrow-next').click();
+        $('.btnOthers').hide();
+        $('.btnMine').show();
+    }
+
+    function toMine(fromMenu)
+    {
+        if (fromMenu) $('.tl-arrow-prev').click();
+        $('.btnMine').hide();
+        $('.btnOthers').show();
+    }
+
+    $(document).ready(function () {
+        $(".tl-tile").hover(
+            function () {
+                var pos = $(this).position();
+                var tileH = $(this).innerHeight();
+                var tileW = $(this).innerWidth();
+                var parentH = $(this).parent().innerHeight();
+                var parentW = $(this).parent().innerWidth();
+                var scale = 1.7;
+                var deltaH = tileH * 0.35;
+                var deltaW = tileW * 0.35;
+                var rH = (parentH - (pos.top + (tileH * scale)));
+                var rX = (parentW - (pos.left + (tileW * scale)));
+
+                if (rH < 0) deltaH = -deltaH;
+                if (pos.top > rH&&rH>0) deltaH = 0;
+                if (rX < 0) deltaW = -deltaW;
+                if (pos.left > rX && rX > 0) deltaW = 0;
+
+                $(this).animate({ top: deltaH,left:deltaW }, 100);
+
+                $(this).addClass("animate_tile");
+            },
+            function () {                
+                $(this).removeClass("animate_tile");
+                $(this).animate({ top: 0,left:0 }, 100);
+            });
+    });
+
+</script>

@@ -1,0 +1,28 @@
+{
+  "_originalSource": "jquery",
+  "_release": "0.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.0",
+    "commit": "6fc01e29bdad0964f62ef56d01297039cdcadbe5"
+  },
+  "_source": "git://github.com/jquery/jquery-dist.git",
+  "_target": "0.0.0",
+  "dependencies": {
+    "jquery": "1.9.1 - 2"
+  },
+  "homepage": "https://github.com/kapantzak/jstiles",
+  "ignore": [
+    "package.json"
+  ],
+  "keywords": [
+    "jquery",
+    "javascript",
+    "browser",
+    "library"
+  ],
+  "license": "MIT",
+  "main": "djstiles.js",
+  "name": "jstiles",
+  "version": "0.0.0"
+}
